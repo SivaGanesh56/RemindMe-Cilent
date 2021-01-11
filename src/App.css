@@ -1,0 +1,19 @@
+/* .heading {
+    margin-top: 30px;
+    text-align: center;
+    color: blue;
+}
+
+.reminder {
+    margin: 10px;
+}
+
+.date {
+    width: 190%;
+} */
+
+@media(max-width:400px) {
+   .date {
+    width: 133%;
+   }
+}
