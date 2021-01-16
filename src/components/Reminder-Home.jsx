@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Reminder from './Reminder';
+import Reminder from './ReminderCard';
 import AddReminder from './AddReminder';
 
 

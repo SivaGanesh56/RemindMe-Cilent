@@ -12,15 +12,15 @@ import UpdateProfile from './components/auth/updateProfile';
 import Header from './components/Header';
 import Signup from './components/auth/SignUp';
 import Footer from './components/Footer';
-import ReminderForm from './components/ReminderForm';
+import NotFound from './components/NotFound';
+import AddReminder from './components/AddReminder';
+import Reminders from './components/Reminders';
 
 const Main = () => {
 
     const [state] = useData();
 
-    const { loading, currentUser } = useAuth();
-
-    console.log(currentUser);
+    const { loading } = useAuth();
 
     return (
         <div className={state?.isLoading || loading ? "main loading" : "main"}>
@@ -32,9 +32,11 @@ const Main = () => {
                 <Route path="/verify-email" component={VerfiyEmail}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/forgot-password" component={ForgotPassword} />
-                <Route path="/add" component={ReminderForm} />
+                <Route path="/add-reminder" component={AddReminder} />
+                <Route path="/my-reminders" component={Reminders} />
                 <PrivateRoute path="/dashboard" component={Dashboard}/>
                 <PrivateRoute path="/update-profile" component={UpdateProfile}/>
+                <Route path="*" component={NotFound} />
               </Switch>
             </Router>
             <Footer />

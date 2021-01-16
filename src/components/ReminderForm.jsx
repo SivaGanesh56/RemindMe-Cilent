@@ -9,10 +9,10 @@ import Layout from './auth/Layout';
 const ReminderForm = (props) => {
 
     const [date, setDate] = useState(props.date);
-    const [title, setTitle] = useState(props.title);
-    const [message, setMessage] = useState(props.message);
+    const [title, setTitle] = useState(props.title || '');
+    const [message, setMessage] = useState(props.message || '');
     const [platform, setPlatform] = useState(props.platform || "email");
-    const [details, setDetails] = useState(props.details);
+    const [details, setDetails] = useState(props.details || '');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
@@ -28,10 +28,11 @@ const ReminderForm = (props) => {
         setLoading(true);
 
         try {
-            // TODO: call api
+            props.onSubmit({ date, title, message, platform, details });
+            // TODO: redirect to reminders page
         } catch (error) {
             console.log(error);
-            setError('Failed to create Reminder')
+            setError('Failed to create Reminder');
         }
 
         setLoading(false);
@@ -64,6 +65,7 @@ const ReminderForm = (props) => {
                                 type="text"
                                 value={title}
                                 onChange={e => setTitle(e.target.value)}
+                                required
                             />
                         </Form.Group>
 
@@ -103,7 +105,7 @@ const ReminderForm = (props) => {
                             />
                         </Form.Group>
 
-                        <Button type="submit" disabled={loading} className="w-100">Sign  Up</Button>
+                        <Button type="submit" disabled={loading} className="w-100">Add Reminder</Button>
                     </Form>
                 </Card.Body>
             </Card>

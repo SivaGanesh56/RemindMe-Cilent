@@ -4,10 +4,6 @@
     color: blue;
 }
 
-.reminder {
-    margin: 10px;
-}
-
 /* @media(max-width:400px) {
    .date {
     width: 133%;
@@ -18,14 +14,6 @@
     background-color: #0D2EA0;
 }
 
-/* .navbar-nav {
-    display: flex;
-}
-
-.navbar-nav:last-child {
-    margin-left: auto;
-} */
-
 .navbar-nav a {
     color: #fff !important;
 } 
@@ -35,8 +23,14 @@
     color: black;
 }
 
-.fas {
-    color: gainsboro;
+.fa-edit {
+    color: #6f9a1c;
+    cursor: pointer;
+}
+
+.fa-trash-alt {
+    color: #f90505;
+    cursor: pointer;
 }
 
 .fa-calendar-plus {
@@ -44,6 +38,10 @@
 }
 
 .fa-list-alt {
+    color: gainsboro;
+}
+
+.fa-cog {
     color: gainsboro;
 }
 
@@ -66,4 +64,33 @@
 
 .dropdown-menu  .dropdown-item {
     color: red !important;
+}
+
+.reminders {
+    margin: 30px;
+}
+
+.reminder {
+    margin: 10px;
+    width: 22rem;
+}
+
+.fa-whatsapp {
+    color: #149f05;
+    font-size: 1.1rem;
+}
+
+.fa-envelope {
+    color: #fb4912;
+    font-size: 1.1rem;
+}
+
+.fa-comment-dots {
+    font-size: 1.1rem;
+    color: #0f4ddc;
+}
+
+.fa-telegram-plane{
+    font-size: 1.1rem;
+    color: #0c22e6;
 }

@@ -35,21 +35,21 @@ const Header = () => {
                     </Nav.Item>
 
                     <Nav.Item>
-                        <Nav.Link href="/signup" className="add-reminder">
+                        <Nav.Link href="/add-reminder" className="add-reminder">
                             <i className="far fa-calendar-plus" />
                             <span> Add Reminder</span>
                         </Nav.Link>
                     </Nav.Item>
 
                     <Nav.Item>
-                        <Nav.Link href="/login">
+                        <Nav.Link href="/my-reminders">
                             <i className="fas fa-list-alt"></i>
                             <span> My Reminders</span>
                         </Nav.Link>
                     </Nav.Item>
 
                     <Nav.Item>
-                        <Nav.Link href="/login">
+                        <Nav.Link href="/configure">
                             <i className="fas fa-cog"></i>
                             <span> Configure</span>
                         </Nav.Link>
