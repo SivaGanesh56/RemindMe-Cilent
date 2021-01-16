@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../../contexts/AuthContext';
+import { useData } from '../../contexts/DataContext';
 import { Link, useHistory } from 'react-router-dom';
 import Layout from './Layout';
 
@@ -13,6 +14,8 @@ const Login = () => {
 
     const { login } = useAuth();
 
+    const [, dispatch] = useData();
+
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -24,12 +27,14 @@ const Login = () => {
         try {
           setError("");
           setLoading(true);
+          dispatch({ type: 'setLoading', payload: true });
           await login(emailRef.current.value, passwordRef.current.value);
-        //   history.push('/');
+          history.push('/');
         } catch {
           setError("Failed to log in");
         }
-    
+        
+        dispatch({ type: 'setLoading', payload: false });
         setLoading(false);
       }
 

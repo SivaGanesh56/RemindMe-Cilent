@@ -31,7 +31,7 @@ const Signup = () => {
           setLoading(true);
           await signup(emailRef.current.value, passwordRef.current.value);
           await verifyEmail();
-        //   history.push("/verify-email");
+          history.push("/verify-email");
         } catch {
           setError("Failed to create an account");
         }

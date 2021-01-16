@@ -10,17 +10,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         <Route
             {...rest}
             render={props => {
-
-                switch(true) {
-                    case currentUser && currentUser.emailVerified:
-                        return <Component {...props} />;
-                    
-                    case currentUser && !currentUser.emailVerified: 
-                        return <Redirect to="/verify-email" />;
-                    
-                    default:
-                        return <Redirect to="/login" />;
-                }
+                return currentUser && !currentUser.emailVerified 
+                    ? <Redirect to="/verify-email" /> :  <Component {...props} />
             }}
         >
 

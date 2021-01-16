@@ -8,12 +8,62 @@
     margin: 10px;
 }
 
-.date {
-    width: 190%;
-} */
-
-@media(max-width:400px) {
+/* @media(max-width:400px) {
    .date {
     width: 133%;
    }
+} */
+
+.custom-navbar {
+    background-color: #0D2EA0;
+}
+
+/* .navbar-nav {
+    display: flex;
+}
+
+.navbar-nav:last-child {
+    margin-left: auto;
+} */
+
+.navbar-nav a {
+    color: #fff !important;
+} 
+
+.navbar-nav span:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.fas {
+    color: gainsboro;
+}
+
+.fa-calendar-plus {
+    color: gainsboro;
+}
+
+.fa-list-alt {
+    color: gainsboro;
+}
+
+.date {
+    width: 147%;
+}
+
+.loader {
+    position: fixed;
+    top: 40%; /* 50%*/
+    left: 45%; /* 50%*/
+    z-index: 999;
+    text-align: center;
+}
+
+.loading {
+    /* background: rgba(0,0,0,0.6); */
+    opacity: 0.4;
+}
+
+.dropdown-menu  .dropdown-item {
+    color: red !important;
 }
