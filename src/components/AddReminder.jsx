@@ -1,5 +1,6 @@
 import React from 'react';
 import ReminderForm from './ReminderForm';
+import Layout from './auth/Layout';
 
 const AddReminder = () => {
 
@@ -9,11 +10,11 @@ const AddReminder = () => {
     }
 
     return (
-        <>
+        <Layout>
             <ReminderForm
                 onSubmit={onSubmit}
             />
-        </>
+        </Layout>
     );
 }
 

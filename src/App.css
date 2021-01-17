@@ -49,6 +49,10 @@
     width: 147%;
 }
 
+.modal-form .date {
+    width: 174%;
+}
+
 .loader {
     position: fixed;
     top: 40%; /* 50%*/
@@ -63,7 +67,7 @@
 }
 
 .dropdown-menu  .dropdown-item {
-    color: red !important;
+    color: #025 !important;
 }
 
 .reminders {

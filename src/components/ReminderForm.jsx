@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import Layout from './auth/Layout';
 // import { useData } from '../contexts/DataContext';
 
 
@@ -42,7 +41,7 @@ const ReminderForm = (props) => {
     const isEmailSelected = platform === "email";
 
     return (
-        <Layout>
+        <div className={props.classes}>
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4">Reminder</h2>
@@ -110,7 +109,7 @@ const ReminderForm = (props) => {
                 </Card.Body>
             </Card>
             
-        </Layout>
+        </div>
     );
 }
 
